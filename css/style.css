@@ -1,0 +1,529 @@
+/* Var -------------------------------------------------------------------------------------*/
+:root {
+	--primary-text-color: #757575;
+	--title-text-color: #212121;
+	--white-text-color: #ffffff;
+	--accent-color: #2196F3;
+	--primary-bg-color: #ffffff;
+	--secondary-bg-color: #F5F4FA;
+	--footer-bg-color: #2F303A;
+	--border-main-color: #AFB1B8;
+	--border-portfolio-color: #EEEEEE;
+	--transparent-bg-color: rgba(47, 48, 58, 0.8);
+}
+
+/* Body ------------------------------------------------------------------------------------*/
+body {
+	background-color: var(--primary-bg-color);
+	color: var(--primary-text-color);
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: .03em;
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p{
+	font-size: inherit;
+	margin: 0;    
+}
+button{
+	letter-spacing: inherit;
+	word-spacing: inherit;
+	text-transform: inherit;
+	display: inline-block;
+	text-align: center;
+	align-items: flex-start;
+	box-sizing: border-box;
+	margin: 0em;
+	font: inherit;
+	padding: 0;
+	border-width: 0px;
+	border-style: none;
+	border-color: transparent;
+	border-image: initial;
+	cursor: pointer;
+}
+.container {
+	width: 1170px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/* HEADER =========================================================================================================================================================================================================== */
+.header{
+	border-bottom: 1px solid #ECECEC;
+}
+.header-container{
+	display: flex;
+	align-items: center;
+}
+
+/* logo ------------------------------------------------------------------------------------*/
+.logo {
+	outline: none;
+	align-self: center;
+	color: #000000;
+	
+	font-family: 'Raleway', sans-serif;
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: .03rem;
+	text-decoration: none;
+}
+.logo > span{
+	color: var(--accent-color);
+}
+
+/* Nav & Contacts---------------------------------------------------------------------------*/
+.nav{
+	display: flex;
+}
+.nav-list,
+.contacts-list{
+	display: flex;
+	font-weight: 500;
+	letter-spacing: .02em;
+}
+.nav-list{
+	margin-left: 85px;
+}
+.nav-list__item:not(:last-child) {
+	margin-right: 50px;
+}
+.contacts-list{
+	align-items: center;
+	margin-left: auto;
+}
+.contacts-list__item:not(:first-child) {
+	margin-left: 30px;
+}
+.nav-list__link,
+.contacts-list__link{
+	outline: none;
+	display: inline-block;
+	padding-top: 30px;
+	padding-bottom: 31px;
+	text-decoration: none;
+}
+.nav-list__link{
+	color: var(--title-text-color);
+}
+.contacts-list__link{
+	color: var(--primary-text-color);
+}
+.contacts-list__image{
+	display: inline-block;
+}
+.nav-list .current,
+.nav-list__link:hover,
+.nav-list__link:focus,
+.contacts-list__link:hover,
+.contacts-list__link:focus {
+	color: var(--accent-color);
+}
+
+
+
+/* INDEX ============================================================================================================================================================================================================ */
+/* Main Section --------------------------------------------------------------------------- */
+.main-section {
+	background-color: var(--footer-bg-color);
+}
+.main-section__container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.main-section__title {
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	color: var(--white-text-color);
+	margin-bottom: 30px;
+}
+.main-section__button{
+	outline: none;
+	width: 200px;
+	height: 50px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.8;
+	letter-spacing: .06em;
+	color: var(--white-text-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+}
+
+/* Benefits ------------------------------------------------------------------------------- */
+.benefits {
+	background-color: var(--primary-bg-color);
+}
+.benefits-container{
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+.benefits-list {
+	display: flex;
+	margin: -15px;
+}
+.benefits-list__item {
+	width: 270px;
+	margin: 15px;
+}
+.benefits-list__image-wrapper {
+	display: flex;
+	justify-content: center;
+	background-color: var(--secondary-bg-color);
+	width: 270px;
+	height: 120px;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+/* .benefits-list__image {
+	display: block;
+} */
+.benefits-list__title {
+	font-weight: 700;
+	line-height: 1.15;
+	text-transform: uppercase;
+	color: var(--title-text-color);
+	margin-bottom: 10px;
+}
+.benefits-list__text {
+	line-height: 1.7;
+	color: var(--primary-text-color);
+}
+
+/* Examples ------------------------------------------------------------------------------- */
+.examples {
+	background-color: var(--primary-bg-color);
+}
+.examples-container{
+	padding-bottom: 94px;
+}
+.examples-title,/* Team - title------------------ */
+.team-title,/* Clients - title--------------- */
+.clients-title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	color: var(--title-text-color);
+}
+.examples-title{
+	margin-bottom: 50px;
+}
+.examples-list {
+	display: flex;
+	margin: -15px;
+}
+.examples-list__item {
+	width: 370px;
+	margin: 15px;
+}
+.examples-list__image {
+	display: block;
+}
+.examples-list__title {
+	width: 370px;
+	height: 70px;
+	background-color: var(--transparent-bg-color);
+	font-weight: 700;
+	line-height: 70px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white-text-color);
+}
+
+/* Team ----------------------------------------------------------------------------------- */
+.team {
+	background-color: var(--secondary-bg-color);
+}
+.team-container{
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+.team-title{
+	margin-bottom: 50px;
+}
+.team-list {
+	display: flex;
+	margin: -15px;
+}
+.team-list__item {
+	background-color: var(--primary-bg-color);
+	width: 270px;
+	margin: 15px;
+	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+	border-radius: 0px 0px 4px 4px;
+	padding-bottom: 24px;
+}
+.team-list__image {
+	display: block;
+	margin-bottom: 30px;
+}
+.team-list__title {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+	color: var(--title-text-color);
+	margin-bottom: 10px;
+}
+.team-list__text {
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+	color: var(--primary-text-color);
+	margin-bottom: 16px;
+}
+.social-list {
+   display: flex;
+	align-items: center;
+   justify-content: center;
+   margin-left: auto;
+	margin-right: auto;
+}
+.social-list__item:not(:last-child) {
+	margin-right: 10px;
+}
+.social-list__link {
+	outline: none;
+	display: flex;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   background-color: transparent;
+}
+.social-list__link:hover,
+.social-list__link:focus {
+	background-color: var(--accent-color);
+}
+/* .social-list__image{
+	display: block;
+} */
+
+/* Clients -------------------------------------------------------------------------------- */
+.clients {
+	background-color: var(--primary-bg-color);
+}
+.clients-container{
+	margin-top: 94px;
+	margin-bottom: 94px;
+}
+.clients-title {
+	margin-bottom: 50px;
+}
+.clients-list {
+	display: flex;
+	margin: -15px;
+}
+.clients-list-item {
+   margin: 15px;
+}
+.clients-list-item__link {
+	outline: none;
+	width: 170px;
+	height: 90px;
+   box-sizing: border-box;
+	display: flex;
+   align-items: center;
+	justify-content: center;
+	border: 1px solid var(--border-main-color);
+   border-radius: 4px;
+}
+.clients-list-item__link > img {
+	display: block;
+}
+.clients-list-item__link:hover,
+.clients-list-item__link:focus {
+	border-color: var(--accent-color);
+}
+
+
+
+/* PORTFOLIO ======================================================================================================================================================================================================== */
+.portfolio {
+	background-color: var(--primary-bg-color);
+}
+.portfolio-container{
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+/* Filter --------------------------------------------------------------------------------- */
+.portfolio-filter-list {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+/* .portfolio-filter-list__item {
+} */
+.portfolio-filter-list__item:not(:last-child) {
+	margin-right: 8px;
+}
+.portfolio-filter-list__button-text {
+	outline: none;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	color: var(--title-text-color);
+	background-color: var(--secondary-bg-color);
+	border-radius: 4px;
+	padding: 6px 22px;
+}
+.portfolio-filter-list__button-text:hover,
+.portfolio-filter-list__button-text:focus,
+.portfolio-filter-list__button-text:active {
+	color: var(--white-text-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio items ------------------------------------------------------------------------ */
+.portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -15px;
+}
+.portfolio-list__item {
+	/* width: 350px; */
+	margin: 15px;
+	background: var(--primary-bg-color);
+	box-sizing: border-box;
+}
+.portfolio-list__link {
+	display: block;
+	text-decoration: none;
+	outline: none;
+}
+.portfolio-list__link:hover,
+.portfolio-list__link:focus{
+	box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.portfolio-list__image {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.portfolio-list__content{
+	border: 1px solid var(--border-portfolio-color);
+	border-top: transparent;
+}
+.portfolio-list__title {
+	padding-top: 20px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+	color: var(--title-text-color);
+	padding-left: 24px;
+}
+.portfolio-list__text {
+	font-size: 16px;
+	line-height: 1.88;
+	color: var(--primary-text-color);
+	padding-left: 24px;
+	padding-top: 4px;
+	padding-bottom: 20px;
+}
+.portfolio-list__hover-text-wrapper{
+	display: none;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 63px 24px;
+	position: absolute;
+	width: 370px;
+	height: 294px;
+   margin-top: -294px;
+	background-color: rgba(33, 150, 243, 0.9);
+}
+.portfolio-list__hover-text {
+	font-size: 18px;
+	line-height: 1.56;
+	color: var(--white-text-color);
+}
+
+
+
+/* FOOTER ============================================================================================================================================================================================================*/
+.footer{
+	background-color: var(--footer-bg-color);
+}
+.footer-container{
+	display: flex;
+	align-items: baseline;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+/* logo ------------------------------------------------------------------------------------*/
+.footer-logo {
+	color: var(--white-text-color);
+	font-style: normal;
+}
+
+/* Adress ----------------------------------------------------------------------------------*/
+.address {
+	margin-right: 69px;
+}
+.address-list {
+	line-height: 1.7;
+	font-style: normal;
+	margin-top: 20px;
+}
+.address-list__item:not(:last-child){
+	margin-bottom: 9px;
+}
+.address-list__street {
+	color: var(--white-text-color);
+	text-decoration: none;
+	outline: none;
+}
+.address-list__mail,
+.address-list__tel {
+	color: rgba(255, 255, 255, .6);
+	text-decoration: none;
+	outline: none;
+}
+.footer-link {
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.1);;
+}
+/* Social & Subscribe-----------------------------------------------------------------------*/
+.social{
+	margin-right: auto;
+}
+.social-title,
+.subscribe-title{
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--white-text-color);
+	font-style: normal;
+	margin-bottom: 20px;
+}
+
+
+
+/* UTILITS ========================================================================================================================================================================================================== */
+.active {
+	display: block;
+}
