@@ -4,6 +4,7 @@
 	--title-text-color: #212121;
 	--white-text-color: #ffffff;
 	--accent-color: #2196F3;
+	--button-hover: #188CE8;
 	--primary-bg-color: #ffffff;
 	--secondary-bg-color: #F5F4FA;
 	--footer-bg-color: #2F303A;
@@ -42,6 +43,11 @@ button{
 	border-color: transparent;
 	border-image: initial;
 	cursor: pointer;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 .container {
 	width: 1170px;
@@ -120,9 +126,20 @@ button{
 .contacts__item:not(:last-child) {
 	margin-right: 30px;
 }
+.contacts__icon-envelope{
+	width: 16px;
+	height: 12px;
+	margin-right: 10px;
+}
+.contacts__icon-smartphone{
+	width: 10px;
+	height: 15px;
+	margin-right: 10px;
+}
 .nav__link,
 .contacts__link{
-	display: inline-block;
+	display: flex;
+   align-items: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
 	text-decoration: none;
@@ -139,14 +156,26 @@ button{
 .contacts__link:hover,
 .contacts__link:focus {
 	color: var(--accent-color);
+	--color1: var(--accent-color)
 }
 
 
 
 /* INDEX ============================================================================================================================================================================================================ */
 /* Hero Section --------------------------------------------------------------------------- */
-.hero-section {
-	background-color: var(--footer-bg-color);
+.hero-section{
+	max-width: 1600px;
+	height: 600px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	background-image: 
+		linear-gradient(90deg, 
+		var(--transparent-bg-color) 0%, 
+		var(--transparent-bg-color) 100%),
+		url('../images/hero.jpg');
+	background-position: center;
+   background-size: cover;
 }
 .hero-section__container{
 	display: flex;
@@ -167,7 +196,6 @@ button{
 	margin-bottom: 30px;
 }
 .hero-section__button{
-	/* outline: none; */
 	width: 200px;
 	height: 50px;
 	font-weight: 700;
@@ -178,6 +206,9 @@ button{
 	background-color: var(--accent-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+}
+.hero-section__button:hover{
+	background-color: var(--button-hover);
 }
 
 /* Benefits ------------------------------------------------------------------------------- */
@@ -196,16 +227,21 @@ button{
 	width: calc((100% - 4 * 30px) / 4);
 	margin: 15px;
 }
-.benefits__image-wrapper {
+.benefits__icon-wrapper {
 	display: flex;
 	justify-content: center;
+	align-content: center;
 	background-color: var(--secondary-bg-color);
 	min-height: 120px;
 	border-radius: 4px;
 	margin-bottom: 30px;
 }
-/* .benefits-list__image {
-} */
+.benefits__icon{
+	width: 70px;
+	height: 70px;
+	margin-top: auto;
+   margin-bottom: auto;
+}
 .benefits__title {
 	font-weight: 700;
 	line-height: 1.15;
